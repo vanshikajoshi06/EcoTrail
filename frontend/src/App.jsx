@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home";
+
 function App() {
   return (
     <>
-      <h1>🌿 EcoTrail</h1>
-      <h2>AI-Powered Nature Travel Planner</h2>
+      <Navbar />
+      <Home />
     </>
   );
 }
