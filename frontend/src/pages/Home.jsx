@@ -1,11 +1,13 @@
-function Home() {
-    return (
-        <>
-            <h1>🌿 EcoTrail</h1>
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
 
-            <h2>AI-Powered Nature Travel Planner</h2>
-        </>
-    );
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
 
 export default Home;

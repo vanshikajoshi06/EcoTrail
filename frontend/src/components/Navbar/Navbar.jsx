@@ -1,33 +1,30 @@
 import "./Navbar.css";
 
 function Navbar() {
-    return (
-        <nav>
+  return (
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo">
+        🌿 EcoTrail
+      </div>
 
-            <div>
+      {/* Navigation Links */}
+      <ul className="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">AI Planner</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-                <h2>🌿 EcoTrail</h2>
-
-            </div>
-
-            <ul>
-
-                <li>Home</li>
-
-                <li>Explore</li>
-
-                <li>AI Planner</li>
-
-                <li>Journal</li>
-
-                <li>About</li>
-
-                <li>Login</li>
-
-            </ul>
-
-        </nav>
-    );
+      {/* Action Buttons */}
+      <div className="nav-buttons">
+        <button className="login-btn">Login</button>
+        <button className="signup-btn">Sign Up</button>
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;
