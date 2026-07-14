@@ -1,3 +1,4 @@
+//Purpose: Entry point of React. // Starts the React application.
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 

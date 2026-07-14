@@ -1,6 +1,13 @@
 import "./Hero.css";
 
-function Hero() {
+function Hero({
+  title,
+  subtitle,
+  taglineHeading,
+  description,
+  primaryButton,
+  secondaryButton,
+}){
   return (
     <section className="hero">
 
@@ -12,26 +19,24 @@ function Hero() {
         </p>
 
         <h1>
-          Discover Nature.
+          {title}    
           <br />
-          Travel Smarter.
+          {subtitle}
           <br />
-          Powered by AI.
+          {taglineHeading}
         </h1>
 
         <p className="hero-description">
-          Plan eco-friendly adventures with AI-generated itineraries,
-          live weather updates, interactive maps, and personalized
-          travel recommendations.
+          {description}
         </p>
 
         <div className="hero-buttons">
           <button className="primary-btn">
-            Start Exploring
+            {primaryButton}
           </button>
 
           <button className="secondary-btn">
-            Learn More
+            {secondaryButton}
           </button>
         </div>
 

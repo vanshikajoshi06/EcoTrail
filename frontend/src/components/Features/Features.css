@@ -1,0 +1,31 @@
+.features {
+
+    padding: 80px;
+
+    background: #f8faf8;
+
+    text-align: center;
+}
+
+.features h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.features-subtitle {
+
+    color: #666;
+
+    margin-bottom: 60px;
+}
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}

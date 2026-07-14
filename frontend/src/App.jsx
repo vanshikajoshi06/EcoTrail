@@ -1,3 +1,4 @@
+//Purpose: Loads the Home page.//Root component of the application.
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 

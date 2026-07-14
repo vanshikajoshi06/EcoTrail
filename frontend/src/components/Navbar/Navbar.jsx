@@ -1,8 +1,8 @@
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar() { //reacts functional component?? ans: A JavaScript function that returns JSX and represents a reusable piece of UI.
   return (
-    <nav className="navbar">
+    <nav className="navbar"> 
       {/* Logo */}
       <div className="logo">
         🌿 EcoTrail
@@ -23,8 +23,8 @@ function Navbar() {
         <button className="login-btn">Login</button>
         <button className="signup-btn">Sign Up</button>
       </div>
-    </nav>
+    </nav> //javaScript syntax
   );
 }
 
-export default Navbar;
+export default Navbar; //This makes the component available to other files.
