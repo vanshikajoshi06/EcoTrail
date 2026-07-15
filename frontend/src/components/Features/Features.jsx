@@ -1,9 +1,40 @@
-import "./Features.css";
 import FeatureCard from "../FeatureCard/FeatureCard";
+import "./Features.css";
+
+const features = [
+    {
+        id: 1,
+        icon: "🌿",
+        title: "Smart AI Planning",
+        description:
+            "Generate personalized travel itineraries based on your preferences.",
+    },
+    {
+        id: 2,
+        icon: "🗺️",
+        title: "Interactive Maps",
+        description:
+            "Discover destinations with maps and navigation.",
+    },
+    {
+        id: 3,
+        icon: "☀️",
+        title: "Live Weather",
+        description:
+            "Check weather forecasts before starting your journey.",
+    },
+    {
+        id: 4,
+        icon: "📖",
+        title: "Travel Journal",
+        description:
+            "Capture memories and keep track of your adventures.",
+    },
+];
 
 function Features() {
     return (
-        <section className="features">
+        <section id="features" className="features" >
 
             <h2>Why Choose EcoTrail?</h2>
 
@@ -13,30 +44,17 @@ function Features() {
 
             <div className="features-grid">
 
-                <FeatureCard
-                    icon="🌿"
-                    title="Smart AI Planning"
-                    description="Generate personalized travel itineraries based on your preferences."
-                />
-
-                <FeatureCard
-                    icon="🗺️"
-                    title="Interactive Maps"
-                    description="Discover destinations with maps and navigation."
-                />
-
-                <FeatureCard
-                    icon="☀️"
-                    title="Live Weather"
-                    description="Check weather forecasts before starting your journey."
-                />
-
-                <FeatureCard
-                    icon="📖"
-                    title="Travel Journal"
-                    description="Capture memories and keep track of your adventures."
-                />
-
+                {
+                    features.map((feature) => (
+                        <FeatureCard
+                            key={feature.id}
+                            icon={feature.icon}
+                            title={feature.title}
+                            description={feature.description}
+                        />
+                    ))
+                }
+                
             </div>
 
         </section>

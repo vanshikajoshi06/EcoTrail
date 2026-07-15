@@ -7,7 +7,23 @@ function Hero({
   description,
   primaryButton,
   secondaryButton,
-}){
+}) {
+  function handleExploreClick() {
+    const section = document.getElementById("features");
+
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  function handleLearnMoreClick() {
+    const section = document.getElementById("about");
+
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <section className="hero">
 
@@ -19,7 +35,7 @@ function Hero({
         </p>
 
         <h1>
-          {title}    
+          {title}
           <br />
           {subtitle}
           <br />
@@ -31,11 +47,16 @@ function Hero({
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">
+          <button
+            className="primary-btn"
+            onClick={handleExploreClick}
+          >
             {primaryButton}
           </button>
-
-          <button className="secondary-btn">
+          <button
+            className="secondary-btn"
+            onClick={handleLearnMoreClick}
+          >
             {secondaryButton}
           </button>
         </div>
