@@ -1,22 +1,41 @@
+import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() { //reacts functional component?? ans: A JavaScript function that returns JSX and represents a reusable piece of UI.
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
-    <nav className="navbar"> 
+    <nav className="navbar">
       {/* Logo */}
       <div className="logo">
         🌿 EcoTrail
       </div>
 
+      <button
+        className="menu-btn"
+        onClick={toggleMenu}
+      >
+        {menuOpen ? "✖" : "☰"}
+      </button>
+
+      <p>Menu Status: {menuOpen ? "Open" : "Closed"}</p>
+
       {/* Navigation Links */}
-      <ul className="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">AI Planner</a></li>
-        <li><a href="#">Journal</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      {menuOpen && (
+        <ul className="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">AI Planner</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      )}
 
       {/* Action Buttons */}
       <div className="nav-buttons">
