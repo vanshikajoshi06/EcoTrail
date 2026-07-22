@@ -5,42 +5,55 @@ function Navbar() { //reacts functional component?? ans: A JavaScript function t
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navLinks = [
+    "Home",
+    "Explore",
+    "AI Planner",
+    "Journal",
+    "About",
+    "Contact"
+  ];
+
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
 
   return (
     <nav className="navbar">
-      {/* Logo */}
-      <div className="logo">
-        🌿 EcoTrail
+      <div className="nav-left">
+
+        <div className="logo">
+          🌿 EcoTrail
+        </div>
+
+          <ul className="nav-links desktop-nav">
+
+            {navLinks.map((link) => (
+
+              <li key={link}>
+                <a href="#">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+
       </div>
 
-      <button
-        className="menu-btn"
-        onClick={toggleMenu}
-      >
-        {menuOpen ? "✖" : "☰"}
-      </button>
+      <div className="nav-right">
 
-      <p>Menu Status: {menuOpen ? "Open" : "Closed"}</p>
+        <div className="nav-buttons">
+          <button className="login-btn">Login</button>
+          <button className="signup-btn">Sign Up</button>
+        </div>
 
-      {/* Navigation Links */}
-      {menuOpen && (
-        <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">AI Planner</a></li>
-          <li><a href="#">Journal</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      )}
+        <button
+          className="menu-btn"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? "✖" : "☰"}
+        </button>
 
-      {/* Action Buttons */}
-      <div className="nav-buttons">
-        <button className="login-btn">Login</button>
-        <button className="signup-btn">Sign Up</button>
       </div>
     </nav> //javaScript syntax
   );

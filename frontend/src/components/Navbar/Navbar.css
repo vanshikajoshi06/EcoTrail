@@ -9,21 +9,32 @@
 
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
 
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
 /* Logo */
 
 .logo {
     font-size: 28px;
     font-weight: bold;
     color: #2E7D32;
+    cursor: pointer;
 }
 
 /* Navigation Links */
 
 .nav-links {
     display: flex;
-    gap: 35px;
-
+    align-items: center;
+    gap: 30px;
     list-style: none;
 }
 
@@ -67,4 +78,35 @@
 
 .signup-btn:hover {
     background: #256428;
+}
+
+/* ==========================
+   Responsive Navbar
+========================== */
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+}
+.desktop-nav{
+    display:flex;
+}
+
+@media (max-width:768px){
+
+    .desktop-nav{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-buttons{
+        display:none;
+    }
+
 }

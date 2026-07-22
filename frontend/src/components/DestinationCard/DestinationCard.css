@@ -1,0 +1,48 @@
+.destination-card{
+
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+    min-height: 420px;
+}
+
+.destination-card:hover{
+    transform:translateY(-8px);
+}
+
+.card-image{
+    height:180px;
+    background:#E8F5E9;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+    font-size:24px;
+    color:#2E7D32;
+}
+
+.destination-card button{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#2E7D32;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.destination-card button:hover{
+    background:#256428;
+}
+.card-footer{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:15px;
+}

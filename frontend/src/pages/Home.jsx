@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Features from "../components/Features/Features";
 import About from "../components/About/About";
+import Explore from "../components/Explore/Explore";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         primaryButton="Start Exploring"
         secondaryButton="Learn More"
       />
+      <Explore />
       <Features />
       <About />
     </>
